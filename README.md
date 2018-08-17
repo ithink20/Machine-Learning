@@ -4,6 +4,7 @@
 In Supervised Learning, we are given a dataset and already know what our correct output should look like, having the idea that there is relationship between input and output.
 
 Supervised learning problems are chategorized into "regression" and "classification" problems. In a regression problem, we are trying to predict the results within the continuous output, meaning that we are trying to map input variables to some continuous function. **Ex: House Price Predicition**.
+
 In a classification problem, we are instead trying to predict results in a discrete output. In other words, we are trying to map input variables into discrete categories.**Ex: Breast Cancer**
 
 **Example 1:**
