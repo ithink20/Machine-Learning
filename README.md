@@ -1,6 +1,6 @@
 # Machine-Learning :bulb:
 
-#### Supervised Learning
+### Supervised Learning
 In Supervised Learning, we are given a dataset and already know what our correct output should look like, having the idea that there is relationship between input and output.
 
 Supervised learning problems are chategorized into "regression" and "classification" problems. In a regression problem, we are trying to predict the results within the continuous output, meaning that we are trying to map input variables to some continuous function. **Ex: House Price Predicition**.
@@ -20,7 +20,7 @@ We could turn this example into a classification problem by instead making our o
 (b) Classification - Given a patient with a tumor, we have to predict whether the tumor is malignant or benign.
 
 
-#### Unsupervised Learning
+### Unsupervised Learning
 
 Unsupervised learning allows us to approach problems with little or no idea what our results should look like. We can derive structure from data where we don't necessarily know the effect of the variables.
 
