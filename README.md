@@ -122,3 +122,30 @@ At each iteration j, one should simultaneously update the parameters ![](http://
 ![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/yr-D1aDMEeai9RKvXdDYag_627e5ab52d5ff941c0fcc741c2b162a0_Screenshot-2016-11-02-00.19.56.png?expiry=1534723200000&hmac=q2oVz5kdhfcfobxMPhh425ADReAKhFODWb3FxXiHzUU)
 
 
+### Gradient Descent Intution
+
+The formula for a single parameter was :
+
+Repeat until convergence:
+
+![](http://latex.codecogs.com/gif.latex?%5Ctheta_1%20%3A%3D%20%5Ctheta_1%20-%20%5Calpha%20%5Cfrac%7B%5Cpartial%7D%7B%5Cpartial%20%5Ctheta_1%7D%20J%28%5Ctheta_1%29)
+
+Regardless of the slope's sign for ![](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cmathrm%7Bd%7D%20%7D%7B%5Cmathrm%7Bd%7D%20%5Ctheta_1%7DJ%28%5Ctheta_1%29%2C%20%5Ctheta_1) eventually converges to its minimum value. The following graph shows that when the slope is negative, the value of ![](http://latex.codecogs.com/gif.latex?%5Ctheta_1) increases and when it is positive, the value of ![](http://latex.codecogs.com/gif.latex?%5Ctheta_1) decreases.
+
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/SMSIxKGUEeav5QpTGIv-Pg_ad3404010579ac16068105cfdc8e950a_Screenshot-2016-11-03-00.05.06.png?expiry=1534723200000&hmac=ugf81PGrdc0_sbXkrecz3FOy6MgTK5JWGHXylxhrp4k)
+
+On a side note, we should adjust our parameter ![](http://latex.codecogs.com/gif.latex?%5Calpha%u03B1) to ensure that the gradient descent algorithm converges in a reasonable time. Failure to converge or too much time to obtain the minimum value imply that our step size is wrong.
+
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/UJpiD6GWEeai9RKvXdDYag_3c3ad6625a2a4ec8456f421a2f4daf2e_Screenshot-2016-11-03-00.05.27.png?expiry=1534723200000&hmac=BM6MlrWlqfnDg9Xf070Vti0SJP-6bXzPIkxEYdr8nqo)
+
+How does gradient descent converge with a fixed step size ![](http://latex.codecogs.com/gif.latex?%5Calpha%u03B1)?
+
+The intuition behind the convergence is that ![](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cmathrm%7Bd%7D%20%7D%7B%5Cmathrm%7Bd%7D%20%5Ctheta_1%7DJ%28%5Ctheta_1%29) approaches 0 as we approach the bottom of our convex function. At the minimum, the derivative will always be 0 and thus we get:
+
+
+![](http://latex.codecogs.com/gif.latex?%5Ctheta_1%20%3A%3D%20%5Ctheta_1%20-%20%5Calpha%20*%200)
+
+
+
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00.png?expiry=1534723200000&hmac=BfvD6Q9eYuc2UTqkD0tbrxY8LpBTfSieaRB1du9KihA)
+
