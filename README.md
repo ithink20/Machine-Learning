@@ -49,7 +49,15 @@ Following image summarizes it all:
 
 
 ### Cost Function - Intution 1
-
+Taking any color and going along the 'circle', one would expect to get the same value of the cost function. For example, the three green points found on the green line above have the same value for J(\theta_0,\theta_1)J(θ 
+0
+​	 ,θ 
+1
+​	 ) and as a result, they are found along the same line. The circled x displays the value of the cost function for the graph on the left when \theta_0θ 
+0
+​	  = 800 and \theta_1θ 
+1
+​	 = -0.15. Taking another h(x) and plotting its contour plot, one gets the following graphs:
 If we try to think of it in visual terms, our training data set is scattered on the x-y plane. We are trying to make a straight line (defined by ![](http://latex.codecogs.com/gif.latex?h_%5Ctheta%20%28x%29)) which passes through these scattered data points.
 
 Our objective is to get the best possible line. The best possible line will be such so that the average squared vertical distances of the scattered points from the line will be the least. Ideally, the line should pass through all the points of our training data set. In such a case, the value of ![](http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29) will be 0. The following example shows the ideal situation where we have a cost function of 0.
@@ -65,5 +73,21 @@ This increases our cost function to 0.58. Plotting several other points yields t
 ![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/fph0S5tTEeajtg5TyD0vYA_9b28bdfeb34b2d4914d0b64903735cf1_Screenshot-2016-10-26-01.09.05.png?expiry=1534723200000&hmac=gHs366iM3c_uT8UZpuq68UfWX8_TkY_Gj2ETryX4MnQ)
 
 Thus as a goal, we should try to minimize the cost function. In this case, ![](http://latex.codecogs.com/gif.latex?%5Ctheta_1%20%3D%201) is our global minimum.
+
+### Cost Function - Intution 2
+
+A contour plot is a graph that contains many contour lines. A contour line of a two variable function has a constant value at all points of the same line. An example of such a graph is the one to the right below.
+
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/N2oKYp2wEeaVChLw2Vaaug_d4d1c5b1c90578b32a6672e3b7e4b3a4_Screenshot-2016-10-29-01.14.37.png?expiry=1534723200000&hmac=DnQcvwNEsMpLz2AiSU37nwu3YNmN5JfzVIOGanxKkmU)
+
+Taking any color and going along the 'circle', one would expect to get the same value of the cost function. For example, the three green points found on the green line above have the same value for ![](http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%5Ctheta_1%29) and as a result, they are found along the same line. The circled x displays the value of the cost function for the graph on the left when ![](http://latex.codecogs.com/gif.latex?%5Ctheta_0%20%3D%20800) and ![](http://latex.codecogs.com/gif.latex?%5Ctheta_1%20%3D%20-0.15) Taking another h(x) and plotting its contour plot, one gets the following graphs:
+
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/26RZhJ34EeaiZBL80Yza_A_0f38a99c8ceb8aa5b90a5f12136fdf43_Screenshot-2016-10-29-01.14.57.png?expiry=1534723200000&hmac=6wXeeCVfZf1FHzJFc2qkHfQ-9B3IBNrkkim4OKNnZLU)
+
+When ![](http://latex.codecogs.com/gif.latex?%5Ctheta_0%20%3D%20360) and ![](http://latex.codecogs.com/gif.latex?%5Ctheta_1%20%3D%200), the value of ![](http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29)  in the contour plot gets closer to the center thus reducing the cost function error. Now giving our hypothesis function a slightly positive slope results in a better fit of the data.
+
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/hsGgT536Eeai9RKvXdDYag_2a61803b5f4f86d4290b6e878befc44f_Screenshot-2016-10-29-09.59.41.png?expiry=1534723200000&hmac=XV5d0hizv2IUIH9T7cUe3oDwb0JUw6lXSGhobX0YvIk)
+
+The graph above minimizes the cost function as much as possible and consequently, the result of ![](http://latex.codecogs.com/gif.latex?%5Ctheta_1) and ![](http://latex.codecogs.com/gif.latex?%5Ctheta_0) tend to be around 0.12 and 250 respectively. Plotting those values on our graph to the right seems to put our point in the center of the inner most 'circle'.
 
 
