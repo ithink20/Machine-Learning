@@ -149,3 +149,27 @@ The intuition behind the convergence is that ![](http://latex.codecogs.com/gif.l
 
 ![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/RDcJ-KGXEeaVChLw2Vaaug_cb782d34d272321e88f202940c36afe9_Screenshot-2016-11-03-00.06.00.png?expiry=1534723200000&hmac=BfvD6Q9eYuc2UTqkD0tbrxY8LpBTfSieaRB1du9KihA)
 
+
+
+## Gradient Descent For Linear Regression
+
+
+When specifically applied to the case of linear regression, a new form of the gradient descent equation can be derived. We can substitute our actual cost function and our actual hypothesis function and modify the equation to :
+
+
+![](http://latex.codecogs.com/gif.latex?%5Cbegin%7Balign*%7D%20%5Ctext%7Brepeat%20until%20convergence%3A%20%7D%20%5Clbrace%20%26%20%5Cnewline%20%5Ctheta_0%20%3A%3D%20%26%20%5Ctheta_0%20-%20%5Calpha%20%5Cfrac%7B1%7D%7Bm%7D%20%5Csum%5Climits_%7Bi%3D1%7D%5E%7Bm%7D%28h_%5Ctheta%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%29%20%5Cnewline%20%5Ctheta_1%20%3A%3D%20%26%20%5Ctheta_1%20-%20%5Calpha%20%5Cfrac%7B1%7D%7Bm%7D%20%5Csum%5Climits_%7Bi%3D1%7D%5E%7Bm%7D%5Cleft%28%28h_%5Ctheta%28x_%7Bi%7D%29%20-%20y_%7Bi%7D%29%20x_%7Bi%7D%5Cright%29%20%5Cnewline%20%5Crbrace%26%20%5Cend%7Balign*%7D)
+
+where m is the size of the training set, ![](http://latex.codecogs.com/gif.latex?%5Ctheta_0) a constant that will be changing simultaneously with ![](http://latex.codecogs.com/gif.latex?%5Ctheta_1) and ![](http://latex.codecogs.com/gif.latex?x_i%2C%20y_i) are values of the given training set (data).
+
+Note that we have separated out the two cases for ![](http://latex.codecogs.com/gif.latex?%5Ctheta_j) into separate equations for ![](http://latex.codecogs.com/gif.latex?%5Ctheta_0) and ![](http://latex.codecogs.com/gif.latex?%5Ctheta_1); and that for
+![](http://latex.codecogs.com/gif.latex?%5Ctheta_1) we are multiplying ![](http://latex.codecogs.com/gif.latex?x_i) at the end due to the derivative. The following is a derivation of ![](http://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%20%7D%7B%5Cpartial%20%5Ctheta_j%7DJ%28%5Ctheta%29) for a single example :
+
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/QFpooaaaEea7TQ6MHcgMPA_cc3c276df7991b1072b2afb142a78da1_Screenshot-2016-11-09-08.30.54.png?expiry=1534723200000&hmac=Lfc92AaAowB6Sqb5a7T2ilLczWZY-KA8iylhNv2__S4)
+
+The point of all this is that if we start with a guess for our hypothesis and then repeatedly apply these gradient descent equations, our hypothesis will become more and more accurate.
+
+So, this is simply gradient descent on the original cost function J. This method looks at every example in the entire training set on every step, and is called batch gradient descent. Note that, while gradient descent can be susceptible to local minima in general, the optimization problem we have posed here for linear regression has only one global, and no other local, optima; thus gradient descent always converges (assuming the learning rate α is not too large) to the global minimum. Indeed, J is a convex quadratic function. Here is an example of gradient descent as it is run to minimize a quadratic function.
+
+![](https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/xAQBlqaaEeawbAp5ByfpEg_24e9420f16fdd758ccb7097788f879e7_Screenshot-2016-11-09-08.36.49.png?expiry=1534723200000&hmac=JoIMmYgQ8-Q1OYTh7S3VJgjqjb93W8TaI_lNhJH2SLk)
+
+The ellipses shown above are the contours of a quadratic function. Also shown is the trajectory taken by gradient descent, which was initialized at (48,30). The x’s in the figure (joined by straight lines) mark the successive values of θ that gradient descent went through as it converged to its minimum.
