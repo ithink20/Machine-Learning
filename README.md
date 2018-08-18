@@ -37,7 +37,7 @@ Non-clustering: The "Cocktail Party Algorithm", allows you to find structure in 
 
 ### Cost Function
 
-We can measure the accuracy of our ![hypothesis](https://www.quora.com/What-is-hypothesis-in-machine-learning) function by using a cost function. This takes an average difference (actually a fancier version of an average) of all the results of the hypothesis with inputs from x's and the actual output y's.
+We can measure the accuracy of our [hypothesis](https://www.quora.com/What-is-hypothesis-in-machine-learning) function by using a cost function. This takes an average difference (actually a fancier version of an average) of all the results of the hypothesis with inputs from x's and the actual output y's.
 
 ![](http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29%20%3D%20%5Cfrac%7B1%7D%7B2m%7D%20%5Csum_%7Bi%20%3D%201%7D%5E%7Bm%7D%20%28%5Chat%7By_i%7D%20-%20y_i%29%5E%7B2%7D%20%3D%20%5Cfrac%7B1%7D%7B2m%7D%20%5Csum_%7Bi%20%3D%201%7D%5E%7Bm%7D%20%28h_%5Ctheta%28x_i%29%20-%20y_i%29%5E%7B2%7D)
 
