@@ -49,15 +49,7 @@ Following image summarizes it all:
 
 
 ### Cost Function - Intution 1
-Taking any color and going along the 'circle', one would expect to get the same value of the cost function. For example, the three green points found on the green line above have the same value for J(\theta_0,\theta_1)J(θ 
-0
-​	 ,θ 
-1
-​	 ) and as a result, they are found along the same line. The circled x displays the value of the cost function for the graph on the left when \theta_0θ 
-0
-​	  = 800 and \theta_1θ 
-1
-​	 = -0.15. Taking another h(x) and plotting its contour plot, one gets the following graphs:
+Taking any color and going along the 'circle', one would expect to get the same value of the cost function. For example, the three green points found on the green line above have the same value for ![](http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29) and as a result, they are found along the same line. The circled x displays the value of the cost function for the graph on the left when ![](http://latex.codecogs.com/gif.latex?%5Ctheta_0%20%3D%20800%20and%20%5Ctheta_1%20%3D%20-0.15) Taking another h(x) and plotting its contour plot, one gets the following graphs:
 If we try to think of it in visual terms, our training data set is scattered on the x-y plane. We are trying to make a straight line (defined by ![](http://latex.codecogs.com/gif.latex?h_%5Ctheta%20%28x%29)) which passes through these scattered data points.
 
 Our objective is to get the best possible line. The best possible line will be such so that the average squared vertical distances of the scattered points from the line will be the least. Ideally, the line should pass through all the points of our training data set. In such a case, the value of ![](http://latex.codecogs.com/gif.latex?J%28%5Ctheta_0%2C%20%5Ctheta_1%29) will be 0. The following example shows the ideal situation where we have a cost function of 0.
